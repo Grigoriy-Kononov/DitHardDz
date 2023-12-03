@@ -80,6 +80,30 @@ Console.WriteLine($"\n    Сумма элементов, стоящих на н�
 [3 7 22 2 78] -> 76
 */
 
+
+Console.WriteLine($"Задача 38. Найдите разницу между максимальным и минимальным элементов массива из вещественных чисел:\n");
+
+int[] arrayRealNumbers = FillArray(10, 1, 100);
+Console.Write("    Получившийся массив: ");
+WriteArray(arrayRealNumbers);
+
+double maxNumber = arrayRealNumbers[0];
+double minNumber = arrayRealNumbers[0];
+
+  for (int i = 1; i < arrayRealNumbers.Length; i++)
+  {
+    if (maxNumber < arrayRealNumbers[i]){
+      maxNumber = arrayRealNumbers[i];
+    }
+    else if (minNumber > arrayRealNumbers[i]){
+      minNumber = arrayRealNumbers[i];
+    }
+  }
+
+  double decision = maxNumber - minNumber;
+  Console.WriteLine($"\n    разница между между максимальным ({maxNumber}) и минимальным({minNumber}) элементами: {decision}\n");
+
+
 /*
 Задайте одномерный массив, заполненный случайными числами. 
 Из входного массива сформируйте массив с чётными и массив с 
