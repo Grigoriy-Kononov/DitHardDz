@@ -49,6 +49,30 @@ Console.WriteLine($"    Количество чётных чисел в масс
 [-4, -6, 89, 6] -> 0
 */
 
+
+Console.WriteLine($"Задача 36. Сумма элементов, стоящих на нечётных позициях:\n");
+
+int RandomNumbers(int numberElements, int min, int max)
+  {
+  int[] randomNumbers = FillArray(numberElements, min, max);
+  int sumElements = 0;
+  Console.Write("    Получившийся массив: ");
+
+    for (int i = 0; i <randomNumbers.Length; i++ ){
+      randomNumbers[i] = new Random().Next(min, max);
+      Console.Write(randomNumbers[i] + " ");
+      if (i % 2 != 1){
+        sumElements = sumElements + randomNumbers[i];
+      }
+    }
+  return sumElements;
+  }
+
+int randomNumbers =  RandomNumbers(20, 100, 1000);
+
+Console.WriteLine($"\n    Сумма элементов, стоящих на нечётных позициях: {randomNumbers}\n");
+
+
 /*
 Задача 38: Задайте массив вещественных чисел. Найдите разницу 
 между максимальным и минимальным элементов массива.
