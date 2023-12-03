@@ -15,6 +15,32 @@
 [345, 897, 568, 234] -> 2
 */
 
+
+Console.Clear();
+Console.WriteLine($"Задача 34. Количество чётных чисел в массиве:\n");
+int[] randomarray = FillArray(20, 100, 1000);
+
+Console.Write("    Получившийся массив: ");
+void WriteArray(int[] array){
+ for (int i = 0; i<array.Length; i++ ){
+ Console.Write(array[i] + " ");
+  }
+}
+
+int QuantityPositive(int[] array){
+ int quantity = 0;
+    for (int i = 0; i<array.Length; i++ ){
+        if (array[i] % 2 == 1){}
+        else quantity++;
+    }
+ return quantity;
+}
+
+WriteArray(randomarray);
+Console.WriteLine();
+int quantity = QuantityPositive(randomarray);
+Console.WriteLine($"    Количество чётных чисел в массиве: {quantity} \n");
+
 /*
 Задача 36: Задайте одномерный массив, заполненный случайными числами. 
 Найдите сумму элементов, стоящих на нечётных позициях.
